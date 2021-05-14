@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading system</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"></script>
+</head>
+<body>
+    <section class="hero is-dark is-fullheight">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="/">
+                            <span class="icon is-large">
+                                <i class="fas fa-2x fa-feather"></i>
+                            </span>
+                            <h1 class="title">
+                                GRADING SYSTEM
+                            </h1>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="hero-body">
+            <div class="container">
+                <div class="box">
+                    <h1 class="title has-text-dark is-spaced">
+                        Enter the grade of a student
+                    </h1>
+                    <form method="post" action="/send">
+                        <div class="field">
+                            <label class="label">Student</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Name of the student" name="student" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Subject</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="Name of the subject" name="subject" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Grade</label>
+                            <div class="control">
+                                <input class="input" type="number" placeholder="Grade of the student" min="0" max="100" name="grade" required>
+                            </div>
+                        </div>
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-dark" type="submit">Submit</button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-light" type="reset">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
